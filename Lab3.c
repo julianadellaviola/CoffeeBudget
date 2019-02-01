@@ -46,6 +46,13 @@ int main()
                "At the end of the month, you will have $%.2lf and %d coupon(s) remaining.\n"
                "On average, you spent $%.2lf on each cup of coffee this month.\n",
                paidCoffees, price, moneyRemaining, paidCoffees, priceAverage);
+    } else if (freeCoffees + paidCoffees == 0) {
+        priceAverage = 0;
+        printf("This month, you can purchase %d coffees at $%.2lf each.\n"
+               "You will not be able to redeem any additional coffees from coupons this month.\n"
+               "At the end of the month, you will have $%.2lf and %d coupon(s) remaining.\n"
+               "On average, you spent $%.2lf on each cup of coffee this month.\n",
+               paidCoffees, price, moneyRemaining, paidCoffees, priceAverage);
     }else{
         printf("This month, you can purchase %d coffees at $%.2lf each.\n"
            "You will be able to redeem an additional %d coffee(s) from coupons.\n"
@@ -53,7 +60,5 @@ int main()
            "On average, you spent $%.2lf on each cup of coffee this month.\n", 
            paidCoffees, price, freeCoffees, moneyRemaining, coupons, priceAverage);
     }
-    
-    
     return(0);
 }
